@@ -1,0 +1,22 @@
+Small Documentation -- Template Codes:
+
+In the template file, some %XFORUM::code% tags can be insterted.
+Your default template file is: x-data/forum/settings/xf-template.html
+The 'code' can be replaced by:
+
+   - HEADER		: Location in the <HEAD> tags, where the title extra scripts tags are placed
+   - SUBTITLE		: Title of current page
+   - TOOLBAR		: Toolbar Location
+   - LOCATION		: Current-Path Location
+   - BODY		: Start of Page Contents
+   - TOOLBARSMALL	: Toolbar with non-standard buttons only
+   - COPYRIGHT		: Required copyright and about information
+   - SUPERVISION	: Note for users who to e-mail and has supervision
+   - SITE		: Webserver URL
+   - URL		: Forum Script URL
+   - IMAGEURL		: URL where forum images are stored
+   - MEMBERLIST		: The text 'Memberlist', in forum language
+   - USERSONLINE	: The text 'Users Online', in forum language
+   - VISITORS		: List of online users
+   - WEBMASTER		: E-mail link to the webmaster
+

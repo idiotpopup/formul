@@ -1,0 +1,494 @@
+Started logging at Mon 13 Aug 2001
+This date is the start of Beta 6 Development
+Really, I've considered logging every change to the code,
+and wondered why I didn't do it before.
+
+
+The first steps of development were: (BL; Before Logging)
+o Intro
+o Admin password and 'Add Subject' wizzard, later replaced by Admin Center
+o Log Files for each day.
+o Thought that editing HTML pages all the time was not a solution, so script also used for GET requests
+o Error page
+o Reading predefined subject Information
+
+- Changes after Beta 1:
+o Adding text-only topics and posts, just typing your name was OK.
+o Member profiles with register and edit feature
+o Name replaced by login name and password in post dialog
+X-FORUM RELEASED IN PRIVATE DIRECTORY
+
+- Changes after Beta 2:
+o Memberlist
+o Login feature with cookies, soon followed with redirect option
+o Help Dialogs
+o X-Forum.cgi crew and compilation slowed the program down.
+o Found a way to use 'require' files, but failed under W2K/IIS5, Solution finally found in CGI programs.
+o Forum Split into files, made program very fast! (from 0.30 to 0.15 CPU Time at intro page)
+
+- Changes after Beta 3:
+o External Settings File.
+o Interface elements contructed by helper routines, so even HTML Outlook was centralized.
+o Iconlist Dialog
+o Editpost Dialog
+o Admin Center with: add subject, edit settings, view (not edit) forum files, view logging files
+o XBBC Parser!! - I don't like s/// regexps that slow down because you need 30 of them for all the
+  XBBC codes. Damn, the parser is fast anyway. - My Thanks to VB6; you can't program such things in other ways there. :'(
+  But real thanks to Perl where you have hashes, flexible English look-a-like code and regexps for nasty pattern matches ;)
+o Visitor List (Users Online)
+o Editmember can't be accessed without login (you could enter your login info to view it when guest)
+
+- Changes after Beta 4:
+o Locktopic Dialog
+o Language Packs (English and Dutch)
+o Templates; After a great idea how to replace tags in a template without slowing down too much
+o New database system.
+  - Files are removed, renamed or included into other files
+  - Filecontents no longer assigned to list of scalars, but constants are being used now.
+  - Sequence in the datafiles don't matter now anymore. The constants make sure the right item is picket out.
+o Admin Center: Edit/Sort Subjects, Edit Forum Files
+
+- Changes after Beta 5:
+X-FORUM FOR PUBLIC AT PERSONAL HOMEPAGE (http://www.suijker.nl)
+o Admin Center: Maintaince Mode, Ban Users/IPs, Censor Words
+o Memberlist requires login.
+o View-Logging Buttons for administrator
+o No more errors dumped in log file when user is admin.
+
+- Changes after Beta 5.1:
+o Changing UI; No one uses all the functions (like icon dialog), it's not clear what to do and where.
+o Rewriting help files
+o Deleted Buttons that can be accessed by moderators only (were visible when not logged on)
+o Add post/Add Topic/Lock topic/Edit post not accessable when not logged in (makes things easier, but cookie support is really required now!)
+o Added option to hide Add post/Add topic/Quote post buttons when user is guest
+o The x-forum.txt was written and so this document.
+o Membergroups + Admin control center
+o Made private subjects possible (for some member-groups only)
+o Footer files not loaded every time when member information is requested.
+o Timezone in Member Profile and option to show them in the admin center.
+o Cool new Error page
+  - All errors are trapped.
+  - Tries to use the template or shows default page with (in BEGIN or compile errors mostly; when nothing is loaded yet)
+  - Does not do anything in a eval call.
+o Parts in General Section Hidden for Guests in Member Profile
+o Setting Added: Guests may not see any e-mail addresses
+o Setting Added: Limit view for (eg. member profile); don't show any of the empty fields.
+o Post Flood Protection: Same member can't post for a while.
+o Fixed some JS/HTML/Displaying errors that only occured in Netscape
+  - missing // before --></SCRIPT> (causes syntax errros)
+  - function doesn't always return a value warning (not in IE!)
+  - Invalid HTML in the ?show=topic page
+  - Removed the "cross-browser" fader in NS because the everything bolow it vanished!!, when it was drawn (except for the horizontal and table lines)
+o Some visual problems couldn't be fixed (due NS 4.7 bugs!):
+  - <NOBR>...</NOBR> text in tables exceeds the table cell width (will be drawn over the next cell)
+  - Table cell widths aren't calculated correctly, when using a combination of fixed- and variable-width cells.
+  - A empty <TD></TD> cell won't be drawn at all (so you see the background through the table)
+  - The separator lines between the table rows/cols aren't draw at all (so you see the background through the table)
+  - Input fields with CCS codes from my template (width and border) won't draw correctly; border is drawn elsewhere and smaller, fields aren't positioned correctly
+o Added mailer to script.
+o Welcome e-mail can be received.
+o Added MSN icon, should be changed anyway (I don't know the link to a user's location yet)
+o Added YIM online icon.
+o Bugfix: No infinite loop caused anymore when <IMG onError=""> sets a URL that couldn't be found aswell.
+o Same error only printed once in the log files.
+o Added 'NEW' icons in subject-select page aswell.
+o Added TRAP_ERRORS constant to x-forum.cgi
+o Posts can be deleted!!
+  - Member-post-status is not affected; e.g. an experienced-poster/user won't loose his status then when all it's posts are lost.
+o Topics can be deleted!!
+o Rearranged some code.
+  - Reading in the subject/topic information and security checks are now done at module load, not when executing a subroutine.
+o Fixed complex-security problems
+  - Rearranging the code helped my solving them.
+  - Problems usually where:
+    - Tested login, moderator access, but forgot to check the password aswell.
+    - Tests being done when displaying the dialog, but not when doing the execution of the dialog (in POST request)
+  - Normal users won't get advantage of these errors.
+  - Errors are usable only when sending manual POST headers to this script.
+o Changed HTML conversion. All one-byte special ASCII chars are replaced now.
+Actually, every file has been changed in the forum! Just look at the mod list, and you know that aswell.
+o Added last login date
+o Fixed problem with default number of entries in database files
+o Added e-mail checks to member database routines (e-mail addresses can't be lost now, they were erased when user=guest and $GUEST_NOMAIL is set)
+o Added online status icon to posts.
+o Fixed security problem. The administrator sees very much, so his cookie is always checked.
+o Added IP address to post info; it's seen by the administrator
+o Variable $BACK_COLOR replaced by $CELL_COLOR, $BACK_COLOR used as alternative (such as error pages)
+o Some shared libaries upgraded to modules; XProgramming::*::*
+o Fixed problem with admin edit dialogs when no subjects/groups are available to edit
+o Password access errors won't be saved in member's personal logfile. It could be someone else trying it!!
+o Moved some TemplateSetReplace code in html_template.pl so the template is displayed better when a run-error occures the print_header_HTML is called.
+o Fixed some problems with the administrator login (when admin.mbr doesn't exist). The admin logged in, and got an error later it's memberfile didn't exist.
+o Upgraded some code into modules, for easier use by my other CGI scripts.
+o Limited Editing Capabilities in the Admin Edit Forum Files Window.
+
+
+- Changes after Release 1.0:
+o Fixed 500 Server Error problem; The date and expires HTTP fields were printed twice, because of the CGI::cache call (which replaces the -expires => 'now' field).
+o Fixed database files for large topics.
+  - Only the displayed posts on the page are now loaded from the .pst files
+  - Any subroutine will now receive a reference instead of an copy of the posts array.
+  - It appears to speed things really up with large topics.
+o Added javascript prompt dialog to XBBC toolbar buttons when text-insertion is not supported.
+o Fixed problem with javascript hover effect in the XBBC toolbar buttons. There is also a soft hack fix in html_xbbcedit.pl available.
+o Fixed problem with <TEXTAREA></TEXTAREA> in netscape. Netscape can't handle a closing tag followed directly (without a space or breakl) after the opening tag.
+o Administrator e-mail can't be hidden, but yet no error message is displayed when you try to hide it.
+o Security Fix: directories named . or .. can't be viewed in the forum file browser
+o Changed <FORM> printing, every form is now printed by other subroutines
+o Cleared up the admin file browser. Any bugs caused by bad readable code are now fixed.
+o Moving a topic is not allowed when there is only one subject available.
+o Confirmation and XBBC Editor Dialog fixed.
+  - If user A requests receives the confirm/xbbcedit dialog,
+    and then user B changes the forum language,
+    and then user A submits the confirm/xbbcedit dialog, it failed.
+o Added Icons to posts and topics (that wasn't implemented yet)
+o Added JavaScript checks to the input fields
+o Fixed 500 problem when the last post from a topic is deleted.
+o XBBC Convertor can handle smileys that look simular, like ::) and :) They are also added.
+o Attempted to speed up the XBBC Convertor a bit more. Not all regexps predefined by qr// worked :'(
+o Code clearup
+o Fixed some more problems when the last topic is moved from a subject
+  - The topic wan't added to the destiny subject table
+  - Considering: (not implemented) The old subject statistics should be made empty...?
+o Speed up the sorting of the memberlist dialog
+o Fixed a small problem with the display of icons in the iconlist dialog, if there are also other files found in the directory.
+o Speed up the iconlist dialog, using a grep between the sort reading construction.
+
+- Changes after Release 1.1:
+o Fixed problem with dlg_addmember.pl. Any registration ended with a error about e-mailing.
+o Changed the member topic-view-times files (.lat) into (.lxs).
+  - Only the required data is loaded now, not the entire file anymore
+  - These files are binary, do download them BINARY aswell.
+o Fixed problem with log files. The data wasn't written correctly in it
+  - Script errors should only be printed once in the log.
+o Fixed problem with memberlist. Typooes I hate them!!!
+o Fixed copy-paste problem in Admin: Edit subjecs. After saving, the wrong subroutine was called ;(
+o Smileys are converted earier, so they don't ruin the HTML code generated by the XBBC code parser.
+o The wrong version of xbbcodes.cfg was released. This file was also updated, but not copied to my release version
+o Added some color settings to xf-settings.pl Every color in the forum can now be changed!
+o Moved the extra toolbar buttons to the right, this implies you need to edit your template.
+o At the script startup, all settings not filled in will be filled in anyway.
+o The admin settings will use the current values of the settings, if you don't pass one of the arguments.
+
+- Changes after Release 1.2:
+o JavaScript Error in Edit Member groups, when you agreed to save changes to a group, before switching to another group.
+o Changed the sprint_selectfield_HTML routine for printing <SELECT> boxes
+o Changed the dialogs, so you can select the membernames, instead of typing in the login names.
+o Changed edit subject/group
+  - This dialog doesn't corrupt subjects/groups anymore when JavaScript is turned off. (after playing with the <SELECT> box)
+  - The dialog box can be used when you don't have JavaScript, but it's very difficult to handle.
+o Updated post preview.
+  - This looks identical to the actual result.
+  - In fact, it shares the same routines used to display a topic.
+o You can view the icon selected in the icon select box now.
+o The post-flood is also tested if you edit a post.
+o Fixed problem with post-flood. The flood was tested after the topic file was created.
+o Fixed minor bug with XBBC convertor. A [quotepost=0]...[/] did not produce the expected result (ie. display 'Quote' instead)
+o Added Instant Messaging!
+o Moved some unused icons to the posticons folder.
+o Edited some posticons. Their size wasn't 16x16.
+o Changed the login check procedure. The crypt-password was sent with the QUERY_STRING !!!
+o Fixed problem with $FORUM_ISOLATED variable. The cookies didn't have the correct path.
+o Added 'NEW' icons to the post headers in the topic window, if the post is new.
+o Added statistics; number of members, topics, posts
+  - Number of topics will be fixed when the subject index page is requested
+  - Number of members and posts will be fixed when the memberlist is requested
+o Fixed bugs in the delete post routines.
+  - Some statistics of the topic were mixed up.
+  - The rest of the forum code made some expectations, based on the wrong statistics
+  - Sometimes, new posted replies in such topics weren't displayed because of this...!!
+o Fixed topic display problem: all posts will be displayed, even if the statisics are incorrect...
+o Log files will no longer be created if the log folder does not exist.
+o Fixed a error-detection problem in the e-mail sender from the 'signup' page.
+o Added subject categories.
+o Updated the look of the admin center.
+o Attempted to change the password crypting algorithm
+  However, this feature has been disabled. Not every webserver has the complex Digest::SHA1 module installed.
+  At my local testserver, every password was converted at the login (unless you're the admin).
+o Fixed the size of the topic status icons.
+o Added sticky topics.
+o Fixed a error-detection problem in the language packs.
+o Added online icon to the memberlist internet column
+o Removed the news fader
+o Changed the structure of the extra modules folder
+o Changed the template. It looks much better now
+o Changed the $MEMBER_TTL (minutes a member is considered logged in) value from 5 to 15 minutes.
+o Added 'Banned' icon to the post footer, at the location where normally the 'Online' icon would appear.
+
+- Changes after Release 1.3:
+o Added repair files option to admin center
+o Removed $| from the settings file. This is now always 1. (1=line-buffering, 0=block-buffering)
+o Fixed a problem with the constants in the intialize.pl module
+o The memberlist never changes the postnum stats anymore. Use the repair options for this.
+o The new module Test::IPAddress is used now.
+  - An IP address like (145.ha.ha.*) is no longer accepted in the admin ban users dialog.
+  - The client IP address can be determined on many more webservers now.
+o Reordered the admin center functions 
+o Made the database routines even more safer.
+  - The id's passed from the QUERY_STRING won't be used directly, but will be converted,
+    so there isn't any change anymore that an user get's information from the webserver through
+    a strange QUERY_STRING, or abuses it, although that was very difficult already.
+    Sample in windows: "x-forum.cgi?show=...&member=admin| erase C:\ *.*| echo "  (note the | symbol)
+o Added pasing of URL's in the post text:
+  - You no longer need to put the [url]..[/] codes arround an URL to make it look like a hyperlink
+  - A www.site.com URL will be converted to http://www.site.com
+  - [url]www.site.com[/url] will be converted to [url=http://www.site.com]www.site.com[/url] (same for [email] code)
+  - A [url=mailto:...] url will be converted to the [email=...] code
+o Added some XBBC codes (might be other users that are used to different forum systems)
+  - Added synonyms for [url] to the XBBC code list:  link, href, hyperlink, uri
+  - Added synonym for [email] to the XBBC code list: mail, e-mail, smtp
+  - Added the color codes: red, green, blue, yellow, purple, black, white, gray  ([color=CODE] can still be used instead)
+o Added add to buddy list for 'AIM'
+o Removed the 'Add Me' icons from the memberlist.
+o Cleared up the tons of icons a bit (that are displayed left to the each post)
+o Added a 'send message' icon to the post footer toolbar.
+o Found some literal english text in the ICQ add icon - changed to language pack text.
+o While loading the XBBC toolbar icon images, the browser sometimes displayed the blank loading screen too long
+o Added pre-loading of images for message icons.
+o The log files are better sorted now in the Admin: log files dialog.
+o Made the log files display better
+o Added a settings file (logactions.cfg).
+  - That file defined what actions should be logged, or not.
+  - Any action not defined there will be logged!
+o Added logging for the 'Maintaince mode' actions
+o (Re)wrote help files
+  - New features were added, but not documentated in the forum help files.
+  - Redisigned the help topics index page
+  - Adjusted some help documentation, because of changes in using the forum
+o To view the iconlist, you need to be logged in now. (why would you want to see that page otherwise?)
+o Small speedup of the icon dialog (when grepping the files)
+o Rewrote some description in the admin center - edit settings dialog
+o Fixed the welcome message e-mail. 
+  - The crypted-password was sent instead
+  - Fixed some spelling errors - ohoh.
+o Removed flock(FH, LOCK_UN) lines, since any buffer might be flushed after it (at close()).
+o Fixed a error-detection problem in the e-mail sender  - again!
+o Fixed a minor problem in the "member banned" test.
+o Fixed problem with the lasterr.log file.
+o Added e-mail notification to topics! (uses fork() when possible)
+o Fixed smiley toolbar animation problems.
+  - The smileys stopped animating when you clicked them.
+  - The tick sound is removed aswell (in IE that happened)
+o The topic view-stats won't be updated anymore when you lock a topic, post/edit something, etc. (except for 'Refreshing the page' in some cases)
+o The files in the admin file browser are sorted better now (directories above, numeric files sorted correcrly)
+o Fixed something in the File::PlainDB module, that made the admin browser edit function produce bad carriage returns at the end of the file.
+o Changed the font size of some titles in a table (subject index, memberlist, file browser)
+o Wrote File::PlainIO module (replaces File::PlainDB)
+  - Fully OO Module.
+  - Easier to work with read+write files.
+o Allowed guests to post (setting)
+  - Flood control is done using the guest IP address.
+o Removed the <No Picture> tag at the posts. For now, it's only used when displaying the member info.
+o Added test to repair database: when the post file is 0 kb (occured to me when I caused an error in the add-post routine)
+o Removed abuse of javascript: URL's in [image=...] and [url=...] tags.
+o Fixed some things with directory removal from the admin file browser.
+  - Browser was redirected to directory that was just removed!
+  - Bad query string could make x-forum do strange things (putting a / at the end)
+  - You can't remove a root directory anymore.
+o Changed post edit flood test
+  - You may edit your last post once without being tested for flooding.
+
+- Changes after Release 1.4:
+o Added e-mail validation test to the MSN field of the user profiles
+o Memberlist update
+  - Added sorting options to memberlist (sorting is done in an intelligent way, not just by literally comparing 2 values)
+  - Added 'date' field to the memberlist (filled with "register", "last post" or "last login" date)
+  - E-mail address is not displayed anymore. It was useless, (unless you're a spammer) so just consuming space
+  - Fixed AIM icon: it used the YIM address.
+  - When the member has posted something, a bar will always be displayed (even if posts/topposts < 0.5%)
+o Fixed things for member website/email/msn/icq/aim/yim icons
+  - Display the name/id in the tooltip text (properly seen in MS-IE only)
+  - Fixed yahoo online icon. It always showed an offline status at the memberlist.
+  - Names/ID's are escaped in the URL QUERY_STRING aswell now when used. (as they should be)
+o Updated/edited a lot of icons (template needs update, because memberlist icon size is 16x16 now)
+o Updated profile display
+  - Added send message to member profile.
+  - Made the word "Banned!" display when a member is banned
+o Added some smileys to the posticon folder
+o Fixed some things with the automatic URL parsing within posts.
+o Updated almost all images to a cooler new look!
+o Added new smileys
+o Added [smiley=...] XBBC code.
+o Added some smiley codes
+o Added a "type" parameter for [list] and [enum] codes (like [list=a], and [enum=I])
+o Renamed UBBC into XBBC. (the U doesn't stand for Universal, for but for Ultimate BB Codes)
+o Fixed problem with missing information when editing posts.
+o Fixed problem with topic display when a poster's profile was not found ("member not exist").
+o Fixed problem with smiley conversions. >D and "D resulted into grin smilies, because it that code was converted to &gt;D or &quot;D first. (includes the ;D smiley)
+o Removed subsitutions for the words x-forum and xforum from the bad list.
+o Removed [pre] code. [code] .. [/code] is used for this now.
+o Added [nomarkup] .. [/nomarkup] code.
+o Rewrote the XBBC processor, and included some speedup fixes. The code became too complex, and properly won't be able to handle very large posts.
+o Attempted to speed up modules (70% of the CPU usage is used for loading)
+  - Speed up for CGI::Location.
+o Updated the IP address test in the Test::IPAddress module.
+o Added cool splitter function to the XBBC processor.
+  - Using quotes arround the parameters, makes all characters inside it literal
+  - for example, here [image=test.gif,16,16,"Hello, there"] the last comma is
+    ignored, since there are "quotes" put arround the parameters.
+  - The quotes arround parameters will be removed.
+  - Use ""double quotes"" to display quotes arround the test.
+  - This feature does not apply to quotes that are typed in
+    the middle of a parameter, like [image=test.gif,16,16,Not "l,iteral"]
+    Here, the final 2 parameters are seen as <not "l> and <iteral">.
+o Optimized the notification e-mail sender for Net::SMTP usage. (for every 200 e-mails, it only uses one Net::SMTP connection)
+
+- Changes after Release 1.5:
+o Fixed problems of the xbbc convertor.
+  - Fixed errors in the censor replacement, when an odd number of lines was provided in the (language).cen file
+  - Restored the checks at XBBC codes (removed by accident)
+    - URL's are automatically clickable now
+    - javascript codes in [image=javascript:] and [url=.. are disabled.
+    - [url=mailto:..] links converted to [email] links 
+    - links,images that don't start with http:// are automatically fixed.
+    - empty [url]www.site.com[/url] codes converted correctly now again. (normally, only [url=http://www.site.com]my site[/url] is accepted)
+o Removed the last <P> tag from the template.
+o Added flexible version checks, so different (but compatible) file versions won't be rejected.
+o Fixed sorting of timezone entries (in edit profile) for Perl versions below 5.005
+o Changed "large font" entry for tables. (index page has a larger font now)
+
+- Changes after Release 1.5 Revision 1:
+o Using [row] or [|] outside a [table] tag is disallowed now. (which closed parent tables too early at the page)
+o XBBC converter handles "must-ignore" closing codes better (ie. codes must be ignored when the opening code is ignored)
+o Fixed missing return value at the end of the language files. (<file> must return true error)
+o Optimized XBBC convertor checks
+  - URL auto-repair. (putting http:// before a url that started with www.)
+  - Image and URL javascript: disable code.
+o Fixed small problem in the language packs (added true return value)
+o Refrased the readme file, so things are a bit easier to understand.
+o Make clear in the readme file, that the even as administrator you have to sign up!! (I got too much e-mail about admin login problems)
+o Included the messages folder in the package directory structure. The "just uploading" would be working now.
+
+- Changes after Release 1.5 Revision 2:
+o Admin Edit Settings requires an sendmail path only if the sendmail e-mail option is used.
+o Fixed problem with appearing %PARAM...% signs. They weren't removed sometimes when not provided.
+o Fixed problem with quoting instant messages; <BR> codes appeared where a line break should be sent.
+
+
+
+- Changes after Release 1.5 Revision 3:
+o Added password changer. (admins can change all passwords, except their own)
+o Added delete member option (admins can delete all members, expect themselves)
+o Added "Move All" topics feature, to clear up subjects
+  - Topics are not re-sorted, just inserted into the other subject
+o Added delete subject option (topics can be moved to one of the other subjects)
+o Added "Admin Edit Template" option
+o Added some style codes to the input.css file
+  - INPUT.CoolTextClr
+  - INPUT.CoolTextDlg
+  - TD.InputLabel
+  - TEXTAREA.smallest
+o Added first-time-installation help to the intro page.
+o Added icons for subject titles
+o Added "please welcome new member" message to the index page, when a new member registered.
+  - This message will be visible for 4 days.
+o Added a status star icons to the Administrator/Moderators in the posts.
+o Allowed the avatars in the membericons folder to be JPEG and PNG images aswell.
+  - GIF is assumed when no file extension is provided.
+  - Image extensions are not case-insensetive anymore.
+o Added moderator list to the subject/topic view.
+o Added new settings
+  - $ALLOW_XBBC     : to disable the XBBC codes completely.
+  - $ALLOW_ICONURL  : to disable the use of URL's as avatar icon!
+  - $CAN_KEEPLOGIN  : set to 0 to disable the new "Remember Me" option at the login
+  - $LOCBAR_HIDE    : to completely hide the location bar
+  - $LOCBAR_LASTURL : when 0, the last item at the location bar is not a hyperlink
+o Added shorter copyright text for small dialogs, so horizontal scrollbars don't appear in those windows.
+o Added help button to XBBC post window (that redirect directly to the markup help page)
+o Added topic number column to index page (removed the number between the parenthesis after the title)
+o Added some smiley codes (with nose), for example :) or :-) can both be used now.
+o Added the e-mail icon for sending e-mail to guest posters. (restored actually)
+o Added more info field to member profiles (to show personal info, interests)
+o Added extra security check to member profiles.
+  - When accessing the profile (not as guest), your password cookie is validated,
+    since the profile displays more personal info when you're not a guest.
+o Added "Remember Me" option to login window.
+  - This will keep you logged in for one month.
+  - Your password will be rechecked when you're not listed in the who's online list anymore.
+o Added support for e-mailing with blat in windows.
+
+o Improved password encryption for passwords longer then 8 characters ;-)
+  - The better encyption will be activated for your account when you change your password.
+  - Old passwords are still compatible with the new encryption
+
+o Changed password policy
+  - Passwords are allowed to be 6 characters now.
+o Changed location for x-forum.lock (Maintaince mode) and x-forum.repair (Repairing)
+  - Not located in the cgi-bin anymore, but the x-data/forum dir is used now.
+o Changed the sorting of the smiley-list
+o Changed admin edit settings: The new $THIS_DOCROOT variable will be used too now.
+o Changed smiley list dialog type (it's now a small dialog too)
+o Changed copyright text.
+o Changed Membericonlist icon titles
+  - List doens't show the image-subjects anymore (like Ripley, and not Aliens-Ripley)
+  - The minus will not be displayed, like "Matrix-Neo-01.gif" becomes "Neo 01"
+  - Added a title text to the icon group displayed in the icon list.
+  - The last tho items don't apply for JavaScript challenged browsers, since their users have to copy-paste the icon title.
+o Changed the about text.
+  - And moved about text to help files.
+  - x-forum.cgi?show=about now redirects to x-forum.cgi?show=help&help=about
+o Changed automatic post title for quotes posts (the title of the quoted post is used now)
+o Changed the page links for subjects and topics:
+  - The current page is bold, just like that was already done with the "admin view log files".
+o Updated help files with new features
+o Moved several icons from the /x-images/folders/ directory to new folders.
+
+o Removed template colors from "Admin Edit Settings" option.
+o Removed the $BACK_COLOR from the settings. It wasn't used anymore by X-Forum, when I removed the fader.
+o Removed the icon location text (displayed below the icon) at the member profile dialog. (what is it good for? just copying I guess)
+
+o Refrazed some language texts
+  - The XBBC error (not bad calling, but can't find textarea)
+  - The "Sort Subjects" option from the admin center. It's now called "Restucture Subjects".
+  - The "no-access" messages a bit.
+  - The "woman unfriendly" word 'him' from the language file at the AIM/YIM/E-mail webmaster texts
+  - The description for checkboxes, like "Hide e-mail from Public".
+  - The description text for "Maintaince Mode" a bit.
+  - The text "Visitors" into "Who's online";
+  - The text "Licence Agreement" into "Terms of Service"
+
+o Fixed some auto-detect problems with CGI::Location (x-modules/CGI/Location.pm)
+  - Added overrule hack to CGI::Location, so you can inject your own pats when detection fails.
+  - Added document-root variable, so directories outside the www-root are detected better too. (will be faked in Windows)
+o Fixed problem in post window, which occured when a second <FORM> is included in the HTML template.
+o Fixed XBBC param splitting.
+  - Using " " in a param list works at it should be, ie.
+    [quote="Hello, there"] will not be split into 2 arguments,
+    but [quote=Hello "D*", ehhh.] will be split into <Hello "D*"> and < ehhh.>
+  - This changed, because some sequences in converting XBBC have been changed too.
+  - The x-data/forum folder is used now.
+o Fixed "total number of posts" statistics, which wasn't updated correctly when a topic (having replies) was deleted.
+o Fixed maintaince problem. You still got the maintaince message when logging in as admin and your previous visited page was the logout window.
+o Fixed sorting for Member names and group names in multiselect boxes, now sorted at name (not ID)
+o The view-Your-Profile button does disappeared when you viewed another member's profile
+o Delayed the moment of loading  for all the post icons that are pre-loaded in the posting window.
+o Fixed bad HTML usage at instant message dialog (visibility problem in netscape)
+o Fixed some title text for smiley toolbar in post window.
+o Fixed JavaScript code in NO buttons of HTML-confirm dialogs, when the dialog was accessed directly.
+o Fixed repair database detecton of "topics that don't refer back to their real parent subject" (ie. "general" lists "topic 12", but "topic 12" says it's listed in "help")
+  - A perl error message appeared, instead of the notification that should be printed.
+  - After this, the topic wasn't added to the target subject-listing (but was removed from the original subject-listing)
+o Fixed problems with e-mailing through sendmail.
+  - Message "Bad Constant Used"
+  - Unexpected Errors sometimes
+  - Admin center had problems with sendmail path validation
+o Maybe Fixed slow reply-posting at Win32 with Perl version less then 5.6
+
+o Attempted to add DHTML input-dialogs to the post window XBBC buttons.
+  - The code is available, but disabled, because IE6 crashed by it!
+  - To activate the DHTML dialogs, run this command from the location bar:
+    javascript:void(XBBC_DO_DHTML=1)
+  - To make IE6 crash, open a dialog (press font-color for example), scroll the browser-window, press close, go to another page.
+o Attempted to add support for 'blat' to the e-mailer.
+  - The code can be activated by setting $MAIL_TYPE to 3.
+  - For some reason, the code works in Perl, but not in an CGI environment?
+
+O Fixed JavaScript e-mail validation function: x.yyyy@zzz.com is accepted now too. (the dot as second character)
+o Fixed "use of undefined value" value message when something failed with e-mailing (in initialize.pl)
+o Fixed iconlist error messages that occured when the membericon folder contained unexpected filenames
+  - A X-Forum message appears when the membericons folder is not found (not a perl exception)
+  - Icons who don't match the "subject-name.ext" pattern will also be displayed now, instead of causing errors. (in extra group).
+  - Icons having a number, like "subject01.ext" will be grouped automatically in subjects too.
+o Fixed simular problem with the smileylist (better message when smileys folder can't be found)
+o Fixed the bug in the subject add/edit dialogs: linebreaks are now removed from the description box.
+o Fixed possible bug in memberlist sorting. (sorting doesn't fail with bad data...)

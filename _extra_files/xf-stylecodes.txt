@@ -1,0 +1,24 @@
+Small Documentation -- Default Markup Classes:
+
+
+These Style classes are used and can by defined in the xf-libaries/style.css file,
+or in your personal x-data/forum/settings/xf-template.html file.
+
+   - A.CommandButton	: Buttons in the toolbar and post edit buttons.
+   - A.icon		: Small simple clickable icon (Messenger Icons)
+   - A.UBBCButton	: Button in UBBC Markup toolbar
+   - A.SmileyButton	: Button in Smiley toolbar
+   - A.newslink		: Link used in the forum news fader.
+   - INPUT.CoolText	: Form Text Box
+   - INPUT.CoolButton	: Form Buttons
+   - INPUT.CoolTextIn	: Form Text Box, made smaller so a button fits next to it.
+   - INPUT.CoolTextClr	: Form Text Box, very small, used for color codes
+   - INPUT.CoolTextDlg	: Form Text Box, a bit small, used for post message window dialogs.
+   - INPUT.CoolButtonIn	: Form Buttons, made smaller so a text box fits next to it.
+   - SELECT.AutoSize	: Form Select Box; Autosized width, in stead of same width as text box.
+   - TEXTAREA.smallest	: Form Multiline Text Box; Small (2 lines)
+   - TEXTAREA.small	: Form Multiline Text Box; Small (4 lines)
+   - TEXTAREA.large	: Form Multiline Text Box; Large (12 lines)
+   - TEXTAREA.editbox	: Box for text file editing.
+   - SPAN.Title		: Title in tables (the text part)
+   - TD.InputLabel	: Label put before the Input fields
