@@ -1,0 +1,2 @@
+Please note that the .lxs files generated here are BINARY files,
+and should be transfered as BINARY files, when you use your FTP program
