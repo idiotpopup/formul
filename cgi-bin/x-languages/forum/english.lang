@@ -1,0 +1,531 @@
+###################################
+##                               ##
+##  >> X-Forum Langauge Pack <<  ##
+##                               ##
+###################################
+
+
+
+use strict;
+
+$LANGID = 'english';	# Help files
+
+$VERSIONS{'language'} = 'Release 1.6';
+LangVerCheck();
+
+##################################################################################################
+## ID's for language packs. (are being converted to inline subroutines by perl)
+
+
+$MSG[SUBTITLE_FORUM]	=  q[Subject Index];
+$MSG[FORUM_EMPTY]	=  q[Please notice that this forum has not been completely set up yet!];
+$MSG[FORUM_LOCKED]	=  q[This forum is currently locked for mantaince by the administrator. Please come back in a few minutes. If you're logged in, you'll be loggin in unless you close this window.];
+$MSG[FORUM_TIME]	=  q[Forum/GMT Time];
+
+$MSG[FORUM_WELCOME1]	=  q[welcome message];
+$MSG[FORUM_WELCOME2]	=  q[Welcome new member!];
+$MSG[FORUM_WELCOME3]	=  q[You're now member of the forum, having the ability to post messages yourself now.];
+$MSG[FORUM_WELCOME4]	=  q[When you're visiting the forum later again, you only have to click at login, or go directly to];
+$MSG[FORUM_WELCOME5]	=  q[In case you need more help, click at the forum on help. You can also send an e-mail to the webmaster];
+
+$MSG[FORUM_NOTIFY1]	=  q[reply notification];
+$MSG[FORUM_NOTIFY2]	=  q[Hello forum member];
+$MSG[FORUM_NOTIFY3]	=  q[A new reply has been posted to a topic you are watching.];
+$MSG[FORUM_NOTIFY4]	=  q[You can view it at];
+$MSG[FORUM_NOTIFY5]	=  q[There may be other replies too, but you won't be notified about them until you have viewed the topic.];
+
+$MSG[BUTTON_HOME]	=  q[Home];
+$MSG[BUTTON_SEARCH]	=  q[Search];
+$MSG[BUTTON_HELP]	=  q[Help];
+$MSG[BUTTON_PROFILE]	=  q[Profile];
+$MSG[BUTTON_MESSAGES]	=  q[Messages];
+$MSG[BUTTON_SENTMSG]	=  q[Sent Messages];
+$MSG[BUTTON_COMPOSEMSG]	=  q[Compose];
+$MSG[BUTTON_COMPOSETO]	=  q[Send Message];
+$MSG[BUTTON_REPLY]	=  q[Reply];
+$MSG[BUTTON_FORWARD]	=  q[Forward];
+$MSG[BUTTON_REGISTER]	=  q[Sign up];
+$MSG[BUTTON_ADMIN]	=  q[Admin];
+$MSG[BUTTON_LOGFILE]	=  q[Log File];
+$MSG[BUTTON_LOGIN]	=  q[Log in];
+$MSG[BUTTON_LOGOUT]	=  q[Log out];
+$MSG[BUTTON_NEWTOPIC]	=  q[New Topic];
+$MSG[BUTTON_ADDPOST]	=  q[Reply];
+$MSG[BUTTON_LOCK]	=  q[Lock];
+$MSG[BUTTON_STICK]	=  q[Stick];
+$MSG[BUTTON_UNLOCK]	=  q[Unlock];
+$MSG[BUTTON_UNSTICK]	=  q[Unstick];
+$MSG[BUTTON_EMAIL]	=  q[E-mail];
+$MSG[BUTTON_QUOTE]	=  q[Quote];
+$MSG[BUTTON_EDITPOST]	=  q[Modify];
+$MSG[BUTTON_DELETE]	=  q[Delete];
+$MSG[BUTTON_EDITMEMBER]	=  q[Modify];
+$MSG[BUTTON_EDITPASSWORD]	=  q[Change Password];
+$MSG[BUTTON_MOVE]	=  q[Move];
+$MSG[BUTTON_MOVEALL]	=  q[Move All];
+$MSG[BUTTON_HOME_INFO]	=  q[Return to the index page];
+$MSG[BUTTON_SEARCH_INFO]	=  q[Search for a specific post];
+$MSG[BUTTON_HELP_INFO]	=  q[Read the documentation and help files];
+$MSG[BUTTON_PROFILE_INFO]	=  q[View the profile of];
+$MSG[BUTTON_MESSAGES_INFO]	=  q[View Instant Messages];
+$MSG[BUTTON_SENTMSG_INFO]	=  q[Display the saved sent messages];
+$MSG[BUTTON_COMPOSEMSG_INFO]	=  q[Send a new message];
+$MSG[BUTTON_COMPOSETO_INFO]	=  q[Send a message to];
+$MSG[BUTTON_REPLY_INFO]	=  q[Reply to this message];
+$MSG[BUTTON_FORWARD_INFO]	=  q[Forward a message];
+$MSG[BUTTON_PROFILE_YOU]	=  q[yourself];
+$MSG[BUTTON_REGISTER_INFO]	=  q[Become a member];
+$MSG[BUTTON_ADMIN_INFO]	=  q[Admin Center];
+$MSG[BUTTON_LOGFILE_INFO]	=  q[View logging file];
+$MSG[BUTTON_LOGIN_INFO]	=  q[Login];
+$MSG[BUTTON_LOGOUT_INFO]	=  q[Logout];
+$MSG[BUTTON_NEWTOPIC_INFO]	=  q[Create a new topic];
+$MSG[BUTTON_ADDPOST_INFO]	=  q[Reply to these messages];
+$MSG[BUTTON_LOCK_INFO]	=  q[Lock this topic];
+$MSG[BUTTON_STICK_INFO]	=  q[Stick this topic];
+$MSG[BUTTON_UNLOCK_INFO]	=  q[Unlock this topic];
+$MSG[BUTTON_UNSTICK_INFO]	=  q[Unstick this topic];
+$MSG[BUTTON_QUOTE_INFO]	=  q[Quote this post in your reply];
+$MSG[BUTTON_EDITPOST_INFO]	=  q[Edit this post];
+$MSG[BUTTON_DELETE_INFO]	=  q[Delete];
+$MSG[BUTTON_EDITMEMBER_INFO]	=  q[Change your profile];
+$MSG[BUTTON_EDITPASSWORD_INFO]	=  q[Change your password];
+$MSG[BUTTON_MOVETOPIC_INFO]	=  q[Move this topic];
+$MSG[BUTTON_MOVETOPICS_INFO]	=  q[Move all topics];
+
+$MSG[GROUP_GENERAL]	=  q[General Information];
+$MSG[GROUP_INTERNET]	=  q[Internet];
+$MSG[GROUP_WEBSITE]	=  q[Website];
+$MSG[GROUP_MESSENGING]	=  q[Messenging];
+$MSG[GROUP_FORUMDISP]	=  q[Forum Appearance];
+$MSG[GROUP_ACCOUNTINFO]	=  q[Account Information];
+$MSG[GROUP_EDITPASSWORD]	=  q[Edit Password];
+$MSG[GROUP_GUESTINFO]	=  q[Guest Information];
+$MSG[GROUP_PERSONAL]	=  q[Personal Information];
+$MSG[GROUP_LICENCE]	=  q[Terms of Service];
+$MSG[GROUP_MESSAGE]	=  q[Message];
+$MSG[GROUP_SUBJECTS]	=  q[Subjects];
+
+$MSG[ACTION_REGISTER]	=  q[Sign up];
+$MSG[ACTION_LOGIN]	=  q[Login];
+$MSG[ACTION_CREATE]	=  q[Create];
+$MSG[ACTION_CHANGE]	=  q[Change];
+$MSG[ACTION_SAVE]	=  q[Save];
+$MSG[ACTION_MOVE]	=  q[Move];
+$MSG[ACTION_MORE]	=  q[More...];
+$MSG[ACTION_POST]	=  q[Post];
+$MSG[ACTION_SEND]	=  q[Send];
+$MSG[ACTION_PREVIEW]	=  q[Preview];
+$MSG[ACTION_RESET]	=  q[Reset];
+$MSG[ACTION_GOBACK]	=  q[Go Back];
+$MSG[ACTION_RETURN]	=  q[Return];
+$MSG[ACTION_AGREE]	=  q[I Agree];
+$MSG[ACTION_DECLINE]	=  q[I Decline];
+$MSG[ACTION_ADD]	=  q[Add];
+$MSG[ACTION_REMOVE]	=  q[Remove];
+$MSG[ACTION_CLOSE]	=  q[Close];
+$MSG[ACTION_SELECT]	=  q[Select];
+
+$MSG[ERROR_NORMAL]	=  q[Problem];
+$MSG[ERROR_SECURITY]	=  q[Security Problem];
+$MSG[ERROR_GENERAL]	=  q[The parameters passed through to this script are invalid or incomplete.];
+$MSG[ERROR_STARTPAGE]	= qq[If you're just an other visitor, please note that this is not the <A href="$THIS_URL">real start page</A> for the forum!];
+$MSG[ERROR_REDIRECT]	=  q[<EM>You will be automatically redirected in 10 seconds.</EM>];
+$MSG[ERROR_HELP1]	=  q[For more help, e-mail to];
+$MSG[ERROR_HELP2]	=  q[giving this error message and the current time and date and what you did before this message showed up.];
+
+$MSG[ERROR_ADMINLOGIN]	=  q[You're not logged in as this forum's administrator!];
+$MSG[ERROR_PASSWORD]	=  q[The user-password combination specified is incorrect!];
+$MSG[ERROR_INPUTREQ]	=  q[Several fields require input!];
+$MSG[ERROR_SIZE1]	=  q[The text in the <EM>];
+$MSG[ERROR_SIZE2]	=  q[</EM> field is too long!];
+$MSG[ERROR_SIZE3]	=  q[Please make it shorter.];
+$MSG[ERROR_NUMBER1]	=  q[The value in the <EM>];
+$MSG[ERROR_NUMBER2]	=  q[</EM> field is invalid!];
+$MSG[ERROR_NUMBER3]	=  q[Please change it into an integer type number.];
+$MSG[ERROR_RANGE]	=  q[It's out of range.];
+$MSG[ERROR_URL1]	=  q[The <EM>URL</EM> field does not contain a valid URL!];
+$MSG[ERROR_URL2]	=  q[It should look like: http://domainname.ext or https://domainname.ext];
+$MSG[ERROR_URLREQ]	=  q[The <EM>URL Title</EM> field can only be used if you enter a website URL!];
+$MSG[ERROR_EMAIL1]	=  q[The <EM>E-mail</EM> field does not contain a valid e-mail address!];
+$MSG[ERROR_EMAIL2]	=  q[It should look like: you@domainname.ext.];
+$MSG[ERROR_PASSLEN]	=  q[For your own safely, your password needs to be at least 6 characters long!];
+$MSG[ERROR_PASSNE]	=  q[The password typed in the confirm field is not equal to the real password!];
+$MSG[ERROR_PATHLOC1]	=  q[The path '];
+$MSG[ERROR_PATHLOC2]	=  q[' is not a valid location!];
+$MSG[ERROR_BACK1]	=  q[Use the];
+$MSG[ERROR_BACK2]	=  q[back];
+$MSG[ERROR_BACK3]	=  q[button of your browser to return the the previous window, so you might be able to correct the error!];
+$MSG[ERROR_LOGIN]	= qq[You're not logged in. Please <A href="$THIS_URL?show=login">login</A> now, or <A href="$THIS_URL?show=addmember">sign up</A> if you're not a member already.];
+$MSG[ERROR_FLOOD1]	=  q[The webserver does not allow you to post multiple messages after each other shortly.];
+$MSG[ERROR_FLOOD2]	=  q[Please try again later, if this is ment to be a serious message with relevance.];
+
+# These Strings are used in JavaScript
+$MSG[FORM_FILLIN]	=  q[You didn't fill in some of the fields.\nPlease fill them in.];
+$MSG[FORM_EMAIL]	=  q[The e-mail address isn't valid!\nIt should look like:\nyourname@domain.com];
+$MSG[FORM_INT]	=  q[You didn't enter an integer value in one of the fields.];
+$MSG[FORM_UINT]	=  q[You didn't enter a positive integer value in one of the fields.];
+$MSG[FORM_FLOAT]	=  q[You didn't enter numeric value in one of the fields.];
+
+$MSG[HTML_FOOTER1]	=  q[This message board is powered by X-Forum, created by];
+$MSG[HTML_FOOTER2]	=  q[more info];
+$MSG[HTML_FOOTER2B]	=  q[More info about];
+$MSG[HTML_SUPERVISION]	=  q[This site's webmaster];
+$MSG[HTML_WEBMASTER]	=  q[the webmaster];
+$MSG[HTML_WEBMASTER_X]	=  q[this site's webmaster];
+$MSG[HTML_MEMBERICON]	=  q[Member Icon];
+$MSG[HTML_MAILTO]	=  q[E-mail to];
+$MSG[HTML_PRIVATEEMAIL]	=  q[This e-mail address is hidden for you!];
+$MSG[HTML_EMAILHIDDEN]	=  q[Hidden E-mail address];
+$MSG[HTML_ICQADD]	=  q[Add Me];
+$MSG[HTML_AIM]	=  q[AOL Instant Messenger];
+$MSG[HTML_AIMSEND]	=  q[Send a message with the AOL Instant Messenger];
+$MSG[HTML_AIMADD]	=  q[Add Me];
+$MSG[HTML_YIM]	=  q[Yahoo Instant Messenger];
+$MSG[HTML_YIMSEND]	=  q[Send a message with the Yahoo Instant Messenger];
+$MSG[HTML_NA]	=  q[N/A];
+$MSG[HTML_GUEST]	=  q[Guest];
+
+$MSG[XBBC_BOLD]	=  q[Bold];
+$MSG[XBBC_ITALICS]	=  q[Italics];
+$MSG[XBBC_UNDERLINE]	=  q[Underline];
+$MSG[XBBC_STRIKE]	=  q[Strikethrough];
+$MSG[XBBC_ALIGNLEFT]	=  q[Left Aligned Text];
+$MSG[XBBC_ALIGNCENTER]	=  q[Centered Text];
+$MSG[XBBC_ALIGNRIGHT]	=  q[Right Aligned Text];
+$MSG[XBBC_ALIGNJUSTIFY]	=  q[Justify Text];
+$MSG[XBBC_FONTFULL]	=  q[Full Font Settings (Face,Color,Size)];
+$MSG[XBBC_FONTFACE]	=  q[Font Face Setting];
+$MSG[XBBC_FONTCOLOR]	=  q[Text Color Setting (english color name or hex #RRGGBB values)];
+$MSG[XBBC_FONTSIZE]	=  q[Text Size Setting (1-7 or relative size)];
+$MSG[XBBC_QUOTETEXT]	=  q[Quote Text];
+$MSG[XBBC_CODELINES]	=  q[Programmingcode (disables markup)];
+$MSG[XBBC_NOMARKUP]	=  q[Literal Text (disables markup)];
+$MSG[XBBC_TYPEWRITER]	=  q[Typewriter Text];
+$MSG[XBBC_SUBSCRIPT]	=  q[Subscript];
+$MSG[XBBC_SUPERSCRIPT]	=  q[Superscript];
+$MSG[XBBC_BULLETLIST]	=  q[List (Bullet Style)];
+$MSG[XBBC_ENUMLIST]	=  q[List (Enumeration Style)];
+$MSG[XBBC_INDENT]	=  q[Text Indentation];
+$MSG[XBBC_HORLINE]	=  q[Horizontal Line];
+$MSG[XBBC_MOVETEXT]	=  q[Moving Text];
+$MSG[XBBC_TABLE]	=  q[Table];
+$MSG[XBBC_TABLEROW]	=  q[Table Row];
+$MSG[XBBC_TABLECELL]	=  q[Table Cells];
+$MSG[XBBC_URLHTTP]	=  q[Hyperlink to website];
+$MSG[XBBC_URLMAILTO]	=  q[Hyperlink to e-mail address];
+$MSG[XBBC_URLFTP]	=  q[Hyperlink to FTP location];
+$MSG[XBBC_IMAGE]	=  q[Image (file,width,height,text)];
+$MSG[XBBC_FLASH]	=  q[Flash Animation (file,width,height)];
+$MSG[XBBC_SHADOW]	=  q[Shadow Effect];
+$MSG[XBBC_GLOWTEXT]	=  q[Glowing Text];
+
+$MSG[XBBC_INPUT_FONT]	=  q[Font];
+$MSG[XBBC_INPUT_SIZE]	=  q[Size];
+$MSG[XBBC_INPUT_COLOR]	=  q[Color];
+$MSG[XBBC_INPUT_URL]	=  q[URL];
+$MSG[XBBC_INPUT_EMAIL]	=  q[E-mail];
+$MSG[XBBC_INPUT_WIDTH]	=  q[Width];
+$MSG[XBBC_INPUT_HEIGHT]	=  q[Height];
+$MSG[XBBC_INPUT_CAPTION]	=  q[Caption];
+$MSG[XBBC_INPUT_TITLE]	=  q[Input Dialog];
+
+$MSG[XBBC_INPUT_NUMBER]	=  q[Please enter a number!];
+$MSG[XBBC_INPUT_FILLIN]	=  q[Please fill in all required fields!];
+$MSG[XBBC_INPUT_BADCLR]	=  q[Please fill in a correct color value!];
+
+$MSG[XBBC_HAPPY]	=  q[Happy];
+$MSG[XBBC_WINK]	=  q[Wink];
+$MSG[XBBC_CHEESY]	=  q[Cheesy];
+$MSG[XBBC_SAD]	=  q[Unhappy];
+$MSG[XBBC_ANGRY]	=  q[Angry];
+$MSG[XBBC_DEVIOUS]	=  q[Devious];
+$MSG[XBBC_GRIN]	=  q[Grin];
+$MSG[XBBC_KISS]	=  q[Kiss];
+$MSG[XBBC_COOL]	=  q[Cool];
+$MSG[XBBC_CRY]	=  q[Cry];
+$MSG[XBBC_TONGUE]	=  q[Tonque];
+$MSG[XBBC_EMBARASSED]	=  q[Embarassed];
+$MSG[XBBC_SHOCKED]	=  q[Shocked];
+$MSG[XBBC_CONFUSED]	=  q[Confused];
+$MSG[XBBC_ROLLEYES]	=  q[Roll Eyes];
+$MSG[XBBC_UNDECIDED]	=  q[Undecided];
+$MSG[XBBC_MOUTHSHUT]	=  q[Mouth Shut];
+$MSG[XBBC_SLEEPING]	=  q[Sleeping];
+
+$MSG[XBBC_MESSAGE]	=  q[Message];
+$MSG[XBBC_ICON]	=  q[Icon];
+$MSG[XBBC_TOOLBAR]	=  q[Markup Toolbar];
+$MSG[XBBC_SELECT]	=  q[Select a part of the text first!];
+$MSG[XBBC_INSERT]	=  q[Type the text this markup should be applied to];
+$MSG[XBBC_NOJSURL]	=  q[This is a JavaScript hyperlink! You are not allowed to execute the program attached to it.];
+
+$MSG[NOTIFY_ADDCHECK]	=  q[E-mail Notification];
+$MSG[NOTIFY_ADD_INFO]	=  q[You'll receive an e-mail when a reply has been posted.];
+$MSG[NOTIFY_CONFIRMADD]	=  q[Are you sure you want to enable e-mail notification for this topic?];
+$MSG[NOTIFY_CONFIRMDEL]	=  q[Are you sure you want to disable e-mail notification for this topic?];
+
+$MSG[SUBTITLE_SMILEYLIST]	=  q[Smiley list];
+$MSG[SMILEYLIST_HOWTO1]	=  q[Please click on the smiley you'd like to use in your message.];
+$MSG[SMILEYLIST_HOWTO2]	=  q[If that won't work, you can always copy the code of the image to the message field.];
+$MSG[SMILEYLIST_EMPTY]	=  q[Can't find any smileys];
+$MSG[SMILEYLIST_NOJS]	=  q[Your browser does property not support JavaScript, so you need to copy the smiley code manually to the message field.];
+
+# These lines will become JavaScript strings, so use double \\ to make a literal \ in the JavaScript string.
+$MSG[SMILEYLIST_FAIL1]	=  q[JavaScript failed to add the image to your message.];
+$MSG[SMILEYLIST_FAIL2]	=  q[Please copy the name of the image];
+$MSG[SMILEYLIST_FAIL3]	=  q[manually into the message text field!];
+
+
+$MSG[GUEST_NONE]	=  q[no guests];
+$MSG[GUEST_SINGLE]	=  q[guest];
+$MSG[GUEST_MORE]	=  q[guests];
+$MSG[GUEST_LOGIN_REQUEST]	= qq[Welcome on the forum, please <A href="$THIS_URL?show=login">login</A> or <A href="$THIS_URL?show=addmember">sign up</A> if you'd like to post messages.];
+$MSG[GUEST_NOACCESS]	=  q[Guests don't have access to this area!];
+$MSG[GUEST_NONOTIFY]	=  q[Guests can't be notified by e-mail!];
+
+$MSG[SUBTITLE_MEMBER]	=  q[User Profile of];
+$MSG[MEMBER_UNKNOWN]	=  q[Unknown Member];
+$MSG[MEMBER_LOGINNAME]	=  q[User Name];
+$MSG[MEMBER_GENDER]	=  q[Gender];
+$MSG[MEMBER_GENDER_M]	=  q[Male];
+$MSG[MEMBER_GENDER_F]	=  q[Female];
+$MSG[MEMBER_GENDER_X]	=  q[Unspecified];
+$MSG[MEMBER_COUNTRY]	=  q[Country];
+$MSG[MEMBER_TIMEZONE]	=  q[Timezone];
+$MSG[MEMBER_LASTPOST]	=  q[Last Post];
+$MSG[MEMBER_REGDATE]	=  q[Member Since];
+$MSG[MEMBER_LASTLOGIN]	=  q[Last Log In];
+$MSG[MEMBER_TIME]	=  q[User's Local Time];
+$MSG[MEMBER_BIRTHDAY]	=  q[Bithday];
+$MSG[MEMBER_WEBSITE]	=  q[Website];
+$MSG[MEMBER_WEBSITE_U]	=  q[Website URL];
+$MSG[MEMBER_WEBSITE_N]	=  q[Website Name];
+$MSG[MEMBER_EMAIL]	=  q[E-mail];
+$MSG[MEMBER_ICQ]	=  q[ICQ];
+$MSG[MEMBER_MSN]	=  q[MSN];
+$MSG[MEMBER_AIM]	=  q[AOL IM];
+$MSG[MEMBER_YIM]	=  q[Yahoo IM];
+$MSG[MEMBER_DISPNAME]	=  q[Display Name];
+$MSG[MEMBER_ICON]	=  q[Icon];
+$MSG[MEMBER_ICONTITLE]	=  q[Icon Title];
+$MSG[MEMBER_POSTS]	=  q[Posts];
+$MSG[MEMBER_FOOTER]	=  q[Signature];
+$MSG[MEMBER_MOREINFO]	=  q[Personal Info/Interests];
+$MSG[MEMBER_EMPTY]	=  q[This member's database is empty!];
+$MSG[MEMBER_EMAIL_HIDE]	=  q[hidden];
+$MSG[MEMBER_HIDECHECK]	=  q[Hide E-Mail from public];
+$MSG[MEMBER_HIDEINFO]	=  q[When checked, your e-mail address won't be dispayed];
+$MSG[MEMBER_WELCOME]	=  q[Send Welcome Message];
+$MSG[MEMBER_WELCOMEINFO]	=  q[I would like to receive a welcome message with my user information];
+$MSG[MEMBER_ISPRIVATE]	=  q[This e-mail address is private, thus hidden for you];
+$MSG[MEMBER_ABUSE]	=  q[This will prevent other users from abusing your member account using this computer.];
+$MSG[MEMBER_POSTER]	=  q[Original Poster];
+$MSG[MEMBER_ADMIN]	=  q[Administrator];
+$MSG[MEMBER_MODERATOR]	=  q[Moderator];
+$MSG[VISITOR_LIST]	=  q[Who's online];
+$MSG[MEMBER_NOTEXIST]	=  q[The requested member does not exist!];
+$MSG[MEMBER_NOACCESS]	=  q[You are not allowed to access this area!];
+$MSG[MEMBER_BANNED]	=  q[The Forum Administrator has banned you from using this forum!];
+$MSG[MEMBER_ISBANNED]	=  q[Banned];
+$MSG[MEMBER_ONLINE]	=  q[Online];
+$MSG[MEMBER_NOICON]	=  q[No Picture];
+$MSG[MEMBER_WELCOME]	=  q[Please welcome our newest member];
+
+$MSG[SUBTITLE_MEMBERLIST]	=  q[Member List];
+$MSG[MEMBERLIST_INDEX]	=  q[No];
+$MSG[MEMBERLIST_NAME]	=  q[Member Name];
+$MSG[MEMBERLIST_DATE]	=  q[Date];
+$MSG[MEMBERLIST_INTERNET]	=  q[Internet];
+$MSG[MEMBERLIST_EMPTY]	= qq[No one has <A href="$THIS_URL?show=addmember">signed up</A> at the moment!];
+$MSG[MEMBERLIST_SORT]	=  q[Sort];
+$MSG[MEMBERLIST_REVERSE]	=  q[Reverse Selection];
+
+$MSG[GROUP_NOTEXIST]	=  q[The requested membergroup does not exist!];
+$MSG[GROUP_EVERYONE]	=  q[Everyone];
+
+$MSG[SUBTITLE_INBOX]	=  q[Received Messages];
+$MSG[SUBTITLE_SENTMSG]	=  q[Sent Messages];
+$MSG[SUBTITLE_COMPOSE]	=  q[Compose Message];
+$MSG[MESSAGES_NONE]	=  q[There are no messages in this folder];
+$MSG[MESSAGE_NOTEXIST]	=  q[The requested message does not exist!];
+$MSG[MESSAGE_RECEIVED]	=  q[Received at];
+$MSG[MESSAGE_TITLE]	=  q[Title];
+$MSG[MESSAGE_SENDER]	=  q[Sent by];
+$MSG[MESSAGE_SENDTO]	=  q[Send to];
+$MSG[MESSAGE_SENTTO]	=  q[Sent to];
+$MSG[MESSAGE_MAXTO]	= "You're not allowed to send a message to more then $IM_SENDTOMAX members at once!";
+$MSG[MESSAGE_SAVESENT]	=  q[Save copy];
+$MSG[MESSAGE_SAVEINFO]	=  q[Save a copy of the message in the folder 'sent messages'];
+
+$MSG[SUBTITLE_DELMSG]	=  q[Delete Message];
+$MSG[DELMSG_CONFIRM]	=  q[Are you sure you want to delete this message?];
+
+$MSG[ISNUM_PAGE]	=  q[Page Parameter];
+$MSG[PAGE_OVERFLOW]	=  q[The requested page does not exist!];
+$MSG[PAGE_CURRENT]	=  q[Page];
+$MSG[PAGE_COUNT]	=  q[Pages];
+
+$MSG[SUBTITLE_SUBJECT]	=  q[Topic Index];
+$MSG[SUBJECT_TITLE]	=  q[Subject Title];
+$MSG[SUBJECT_DESCRIPTION]	=  q[Subject Description];
+$MSG[SUBJECT_MODERATORS]	=  q[Moderators];
+$MSG[SUBJECT_EMPTY]	=  q[There aren't any topics created on this subject!];
+$MSG[SUBJECT_NOTEXIST]	=  q[The requested subject does not exist!];
+$MSG[SUBJECT_LIST]	=  q[Subjects];
+
+$MSG[TOPIC]	=  q[Topic];
+$MSG[SUBTITLE_TOPIC]	=  q[Topic Messages];
+$MSG[TOPIC_NUM]	=  q[Topics];
+$MSG[TOPIC_TITLE]	=  q[Topic Title];
+$MSG[TOPIC_VIEWS]	=  q[Views];
+$MSG[TOPIC_REPLIES]	=  q[Replies];
+$MSG[TOPIC_STARTEDBY]	=  q[Started By];
+$MSG[TOPIC_LASTPOST]	=  q[Last Post];
+$MSG[TOPIC_NORMAL]	=  q[Normal Topic];
+$MSG[TOPIC_HOT]	= qq[Hot Topic (more then $HOT_POSTNUM replies)];
+$MSG[TOPIC_VERYHOT]	= qq[Very Hot Topic (more then $HOTHOT_POSTNUM replies)];
+$MSG[TOPIC_LOCKED]	=  q[Locked Topic (Can't reply anymore)];
+$MSG[TOPIC_STICKY]	=  q[Sticky Topic];
+$MSG[TOPIC_LOCKSTICKY]	=  q[Sticky Locked Topic];
+$MSG[TOPIC_ISLOCKED]	=  q[This topic is locked! You're not allowed to post anything here.];
+$MSG[TOPIC_EMPTY]	=  q[This topic doens not contain any messages!];
+$MSG[TOPIC_STARTED]	=  q[Started at];
+$MSG[TOPIC_NOTEXIST]	=  q[The requested topic does not exist!];
+
+$MSG[SUBTITLE_ADDTOPIC]	=  q[New Topic];
+$MSG[ADDTOPIC_TITLE]	=  q[Topic Title];
+
+$MSG[POST_REPLY]	=  q[Reply #];
+$MSG[POST_ADDED]	=  q[Posted at];
+$MSG[POST_LASTMOD]	=  q[Last Modified at];
+$MSG[POST_BY]	=  q[by];
+$MSG[POST_NOTEXIST]	=  q[The requested post does not exist in this topic!];
+$MSG[POST_QUOTE1]	=  q[On];
+$MSG[POST_QUOTE2]	=  q[wrote];
+$MSG[POST_QUOTE3]	=  q[read quoted post];
+$MSG[POST_QUOTE4]	=  q[Quote];
+$MSG[POST_QUOTE5]	=  q[The quoted post has been deleted!];
+
+$MSG[SUBTITLE_ADDPOST]	=  q[Post Reply];
+$MSG[ADDPOST_QUOTEEND]	=  q[End of Quote]; # Comment Message in [quotepost=?][/ -- comment --] xbbc code.
+$MSG[ADDPOST_TITLE]	=  q[Message Title];
+$MSG[ADDPOST_PREFIX]	=  q[Re: ];
+
+$MSG[FORWARD_PREFIX]	=  q[Fw: ];
+$MSG[FORWARD_FROM]	=  q[From];
+$MSG[FORWARD_TO]	=  q[To];
+$MSG[FORWARD_SUBJECT]	=  q[Subject];
+
+$MSG[SUBTITLE_EDITPOST]	=  q[Modify Message];
+$MSG[SUBTITLE_DELPOST]	=  q[Delete Message];
+$MSG[DELPOST_CONFIRM]	=  q[Are you sure you want to delete this message?];
+
+$MSG[SUBTITLE_LOCK]	=  q[Lock Topics];
+$MSG[LOCK_CONFIRM]	=  q[Are you sure you want to lock this topic?];
+$MSG[LOCK_CONFIRMUN]	=  q[Are you sure you want to unlock this topic?];
+
+$MSG[SUBTITLE_STICK]	=  q[Stick Topics];
+$MSG[STICK_CONFIRM]	=  q[Are you sure you want to make this topic sticky?];
+$MSG[STICK_CONFIRMUN]	=  q[Are you sure you want to undo the sticky setting for this topic?];
+
+
+$MSG[SUBTITLE_LOGIN]	=  q[Login];
+$MSG[SUBTITLE_LOGIN2]	=  q[Logging In];
+$MSG[LOGIN_REGTIP]	= qq[Haven't got an account yet? <A href="$THIS_URL?show=addmember">Signup free</A>.];
+$MSG[LOGIN_EXITTIP]	=  q[Defaultly, you have to <EM>login again when you've closed your browser</EM>.];
+$MSG[LOGIN_REENTER1]	=  q[You only have to];
+$MSG[LOGIN_REENTER2]	=  q[login again];
+$MSG[LOGIN_REENTER3]	=  q[when you're already a member.];
+$MSG[LOGIN_ACCOUNT]	=  q[Account Name];
+$MSG[LOGIN_PASSWORD]	=  q[Password];
+$MSG[LOGIN_WAIT]	=  q[Please wait while logging in...];
+$MSG[LOGIN_TEST]	=  q[Your browser is being tested on the login cookie.];
+$MSG[LOGIN_ALT1]	=  q[You can also];
+$MSG[LOGIN_ALT2]	=  q[start the test];
+$MSG[LOGIN_ALT3]	=  q[yourself.];
+$MSG[LOGIN_ENTERTEST]	=  q[To confirm this, please enter your password.];
+$MSG[LOGIN_FAIL]	=  q[The login procedure failed. Your member cookie has not been correctly stored by your browser! Please check if your browser supports cookies, and if there are accepted by your browser.];
+$MSG[LOGIN_REMEMBER]	=  q[Remember Me];
+$MSG[LOGIN_REMEMBER_INFO]	=  q[Keeps you logged after exiting this window];
+
+$MSG[SUBTITLE_REGISTER]	=  q[Sign up];
+$MSG[REGISTER_LOGIN]	=  q[Choose Login Name];
+$MSG[REGISTER_PASS1]	=  q[Choose Password];
+$MSG[REGISTER_PASS2]	=  q[Verify Password];
+$MSG[REGISTER_LICENCE]	=  q[Terms of Service];
+$MSG[REGISTER_EXISTS]	=  q[An other member has already signed up using a simular login name!!];
+$MSG[REGISTER_CHOOSE]	=  q[Please choose an other login name!];
+$MSG[REGISTER_NOTAGREE]	=  q[You did not agree with the terms of service!];
+$MSG[REGISTER_IDCHAR]	=  q[Your login name has to start with an alphabetic letter!];
+
+$MSG[REGISTER_LICENCE1]	=  q[You agree, through your use of this forum, that you will not post any material which is false, defamatory, inaccurate, abusive, vulgar, hateful, harassing, obscene, profane, sexually oriented, threatening, invasive of a person's privacy, or otherwise violative of ANY law. This is not only humerous, but legal actions can be taken against you. You also agree not to post any copyrighted material unless the copyright is owned by you or you have consent from the owner of the copyrighted material. Spam, flooding, advertisements, chain letters, pyramid schemes, and solicitations are also inappropriate to this forum.'];
+$MSG[REGISTER_LICENCE2]	=  q[Note that it is impossible for us to confirm the validity of posts on this forum. Please remember that we do not actively monitor the posted messages and are not responsible for their content. We do not warrant the accuracy, completeness or usefulness of any information presented. The messages express the views of the author, not necessarily the views of this forum. Anyone who feels that a posted message is objectionable is encouraged to notify an administrator of this forum immediately. We have the rights to remove objectionable content, within a reasonable time frame, if we determine that removal is necessary. This is a manual process, however, so please realize that we may not be able to remove or edit particular messages immediately. This policy goes for member profile information as well.];
+$MSG[REGISTER_LICENCE3]	=  q[You remain solely responsible for the content of your messages, and you agree to indemnify and hold harmless this forum, and any related websites to this forum. We at this forum also reserve the right to reveal your identity (or any information we have about you) in the event of a complaint or legal action arising from any information posted by you.];
+$MSG[REGISTER_LICENCE4]	=  q[You have the ability, as you register, to choose your username. We advise that you keep the name appropriate. With this user account you are about to register, you agree to never give your password out to another member, for your protection and for validity reasons. You also agree to NEVER use another member's account to post messages or browse this forum.];
+$MSG[REGISTER_LICENCE5]	=  q[After you register and log into this forum, you can fill out a detailed profile. It is your responsibity to present clean and accurate information. Any information we deem inaccurate or vulgar will be removed.];
+$MSG[REGISTER_LICENCE6]	= qq[Please note that with each post, your IP address is recorded, in the event that you need to be banned from this forum or your ISP contacted. This will only happen in the event of a major violation of this agreement.];
+
+$MSG[SUBTITLE_EDITPASSWORD]	=  q[Change Password for];
+$MSG[EDITPASSWORD_NOADMIN]	=  q[Administrators can't change their password online directly! Please update your admin password line in the xf-settings.pl file:];
+$MSG[EDITPASSWORD_LOGIN]	=  q[When your your password is changed, you will automatically login again.];
+$MSG[PASSWORD_OLD]	=  q[Current Password];
+$MSG[PASSWORD_ADMIN]	=  q[Administrator Password];
+
+
+$MSG[SUBTITLE_EDITMEMBER]	=  q[Change Profile of];
+$MSG[EDITMEMBER_LOGIN]	=  q[You're not logged in as this user name!];
+$MSG[EDITMEMBER_NOJS]	=  q[Warning: Your browser can't run JavaScript codes, so the 'More...' button won't work properly.];
+$MSG[EDITMEMBER_HOWTO1]	=  q[Please];
+$MSG[EDITMEMBER_HOWTO2]	=  q[select an icon];
+$MSG[EDITMEMBER_HOWTO3]	=  q[form our database manually, and copy the name (below the icon) to the 'Icon URL' text field.];
+$MSG[EDITMEMBER_ICON]	=  q[Icon URL / Name];
+$MSG[EDITMEMBER_ICON2]	=  q[Icon Name (no URL)];
+$MSG[EDITMEMBER_NOURL]	=  q[You may only select an avatar from the icon list at this forum!];
+
+$MSG[SUBTITLE_DELMEMBER]	=  q[Delete Profile];
+$MSG[DELMEMBER_CONFIRM]	=  q[You you really sure you want to remove this member profile?];
+
+$MSG[SUBTITLE_LOGOUT]	=  q[Logout];
+$MSG[SUBTITLE_LOGOUT2]	=  q[Logging Out];
+$MSG[LOGOUT_WAIT]	=  q[Please wait while logging out...];
+$MSG[LOGOUT_RETURN]	=  q[Return to the index page];
+
+$MSG[SUBTITLE_ICONLIST]	=  q[Icon List];
+$MSG[ICONLIST_HOWTO1]	=  q[Please click on the image you'd like to use in your account.];
+$MSG[ICONLIST_HOWTO2]	=  q[If that won't work, you can always copy the title of the image to the right field in your account.];
+$MSG[ICONLIST_EMPTY]	=  q[Can't find any icons];
+$MSG[ICONLIST_NOJS]	=  q[Your browser does property not support JavaScript, so you need to copy the name of the icon you like to use in your account to the 'Icon URL' field in the 'Change Profile dialog'.];
+
+# These lines will become JavaScript strings, so use double \\ to make a literal \ in the JavaScript string.
+$MSG[ICONLIST_FAIL1]	=  q[JavaScript failed to set the image as your account icon.];
+$MSG[ICONLIST_FAIL2]	=  q[Please copy the name of the image];
+$MSG[ICONLIST_FAIL3]	=  q[manually into the right text field!];
+
+$MSG[SUBTITLE_MOVETOPIC]	=  q[Move Topic];
+$MSG[MOVETOPIC_NONE]	=  q[There are no other subjects you can move this topic to!];
+$MSG[SUBTITLE_MOVETOPICS]	=  q[Move Topics];
+$MSG[MOVETOPICS_NONE]	=  q[There are no other subjects you can move the topics to!];
+
+$MSG[SUBTITLE_DELTOPIC]	=  q[Delete Topic];
+$MSG[DELTOPIC_CONFIRM]	=  q[Are you sure you want to delete this topic?];
+
+$MSG[SUBTITLE_PREVIEW]	=  q[Post Preview];
+$MSG[PREVIEW_TITLE]	=  q[Sample Post];
+
+$MSG[SUBTITLE_HELP]	=  q[Help];
+$MSG[HELP_TOPICS]	=  q[Help Topics];
+$MSG[HELP_MORE1]	=  q[For more help, please send mail to];
+$MSG[HELP_MORE2]	=  q[giving this help topic id];
+$MSG[HELP_MORE3]	=  q[and what you did before reading this help topic.];
+$MSG[HELP_UNAVAILABLE]	=  q[No help is available for this topic!];
+
+$MSG[SUBTITLE_CONFIRM]	=  q[Confirmation];
+$MSG[CONFIRM_YES]	=  q[Yes];
+$MSG[CONFIRM_NO]	=  q[No];
+
+$MSG[STAT_MEMBERS]	=  q[Registered Members];
+$MSG[STAT_POSTS]	=  q[Total posts];
+$MSG[STAT_TOPICS]	=  q[Total topics];
+
+1;

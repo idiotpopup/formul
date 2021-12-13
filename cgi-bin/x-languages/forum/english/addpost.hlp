@@ -1,0 +1,45 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+
+<B> Posting Messages </B> <BR>
+As a member of the forum, you can post new messages.
+The message you'll post could be a reply to the messages
+in a particular topic, containing a quote from an other post or not.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Home', located in the upper toolbar</LI>
+  <LI> Press at a Subject/Category you're interested in, or choose the general subject</LI>
+  <LI> Press at a topic, and read through it.</LI>
+  <LI> Press 'Reply', located in the extra toolbar</LI>
+</UL>
+<P>
+<EM>Before you can post a reply, you need to login or signup first.</EM>
+<P>
+<B> Message </B> <BR>
+Type a clear description as title of the message.
+As default, the notation Re &lt;Old Title&gt; is used, which stands for 'reply of &lt;message&gt;'.
+Next, you can enter your message.
+Becore you post the message, it might be useful to look at the result,
+by pressing the 'Preview' button. This is quite useful when you're quoting people,
+use markup or smileys.
+<P>
+<B> Smileys </B> <BR>
+Smileys (or emoticons) are used by many people at the internet to express a fealing or emotion in a part of text.
+Mostly the characters <KBD>;)</KBD> and <KBD>:(</KBD> are used (rotate your head to the left).
+This forum replaced common used smileys by real images, which is much cooler and less difficult to understand.
+Those special expressions can be added aswell by pressing the smiley at the special markup toolbar.
+<P>
+<B> Markup </B> <BR>
+Experienced users might like it to add markup to their posts.
+This markup won't be added right away, but codes are being inserted.
+These codes will later be replaced by the real markup. <BR>
+More Info: <A href="x-forum.cgi?show=help&help=markup">Markup Samples</A>.
+<P>
+<B> Quoting </B> <BR>
+While normal messages contain a hit or advise to the messages in general, can also quote something from a previous message.
+In this case, you don't press the reply button, but look for the post and press the 'Quote' button,
+positioned below the message. The reply you're about the make has already some text in it.
+The text that has been inserted is the quoted message and some extra markup codes.
+You can short-in the message then, and write your reply below the quoted part (ie. under the [/End of Quote] label)
+The result of your quoted message, will be visible when you press the 'Preview' button.

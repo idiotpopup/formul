@@ -1,0 +1,37 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+
+<B> Logging in </B><BR>
+After you've signed up, you're automatically logged in.
+At the next visit, you'll have to do this yourself.
+Logging in is essential for your forum membership.
+The extra possibilities then are:
+<UL>
+  <LI> Being able to post messages and start topics</LI>
+  <LI> Editing your own messages</LI>
+  <LI> Editing your profile</LI>
+  <LI> Viewing the memberlist</LI>
+  <LI> Sending private messages to other members</LI>
+  <LI> Seeing more profile information</LI>
+  <LI> Seeing 'NEW' markings when topics have changed since your last visit of them</LI>
+  <LI> Doing moderator things (only if you're a moderator)</LI>
+</UL>
+<P>
+<B> How do I log in? </B><BR>
+<UL>
+  <LI> Press at 'Login', located in the upper toolbar</LI>
+</UL>
+<P>
+<EM>Before you can do this, you'll have to signup first</EM>
+<P>
+<B> Cookie Notes </B> <BR>
+The only thing you have to allow is our login cookie.
+Without the cookie, you're not logged in.
+As soon as you close this window, you're not logged in anymore!
+In that way, no one can abuse your member account information.
+This is especialy very useful when you're working on public computers,
+like at school or in the libary.
+<P>
+<B> Security of the Cookie </B>
+The cookie is visible only from this directory, so other locations at this server
+won't see the cookie. The password within is encrypted, just like all other passwords.

@@ -1,0 +1,43 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.4 Release --->
+
+<B> Sending Private Messages </B> <BR>
+As a member of the forum, you can send private messages to other members.
+This is just like e-mail, but the message won't be sent to a different location.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Messages', located in the upper toolbar</LI>
+  <LI> Press at 'Compose', located in the extra toolbar</LI>
+</UL>
+<P>
+<EM>Before you can send a message, you need to login or signup first.</EM>
+<P>
+<B> Message </B> <BR>
+Type a clear description as title of the message.
+Next, you can enter your message.
+Before you post the message, it might be useful to look at the result,
+by pressing the 'Preview' button. This is quite useful when you're quoting people,
+use markup or smileys.
+<P>
+<B> Smileys </B> <BR>
+Smileys (or emoticons) are used by many people at the internet to express a fealing or emotion in a part of text.
+Mostly the characters <KBD>;)</KBD> and <KBD>:(</KBD> are used (rotate your head to the left).
+This forum replaced common used smileys by real images, which is much cooler and less difficult to understand.
+Those special expressions can be added aswell by pressing the smiley at the special markup toolbar.
+<P>
+<B> Markup </B> <BR>
+Experienced users might like it to add markup to their posts.
+This markup won't be added right away, but codes are being inserted.
+These codes will later be replaced by the real markup. <BR>
+More Info: <A href="x-forum.cgi?show=help&help=markup">Markup Samples</A>.
+<P>
+<B> Save a copy </B><BR>
+If you check this option, a copy of the message will be put in the
+"Sent Messages" folder. Then, you can view the message later again,
+and forward it.
+<P>
+<B> Other Possibilities for sending messages </B> <BR>
+You're not forced to send messages in this particular way.
+You can also reply, quote or forward a received message.
+The buttons for those actions are located at the bottom
+of each message. Simply press the button for that specific message.

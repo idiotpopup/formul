@@ -1,0 +1,57 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+
+<B> Help Topics </B> <BR>
+This is a list of the available help topics.
+<P>
+<TABLE border="0" width="90%"><TR valign="top"><TD>
+
+<TABLE border="0">
+  <TR><TD><B>General</B></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=forum">General Forum Information</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=subject">Viewing a Category</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=topic">Viewing a Topic</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=about">About</A></TD></TR>
+</TABLE>
+
+<BR></TD><TD>
+
+<TABLE border="0">
+  <TR><TD><B>Members / User Profiles</B><TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=addmember">Signing Up</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=login">Logging In</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=member">Profile Information</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=editmember">Editing personal and profile information</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=editpassword">Changing your password</A></TD></TR>
+</TABLE>
+
+<BR></TD></TR><TR valign="top"><TD>
+
+<TABLE border="0">
+  <TR><TD><B>Forum Usage</B><TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=addpost">Posting Messages</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=addtopic">Starting Topics</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=editpost">Editing Messages</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=markup">Markup Samples</A></TD></TR>
+</TABLE>
+
+<BR></TD><TD>
+
+<TABLE border="0">
+  <TR><TD><B>More about members</B><TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=memberlist">List of members</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=messages">Private Messages</A></TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=compose">Sending Private Messages</A></TD></TR>
+</TABLE>
+
+<BR></TD></TR><TR valign="top"><TD>
+
+<TABLE border="0">
+  <TR><TD><B>Administration</B><TD></TR>
+  <TR><TD><A href="x-forum.cgi?show=help&help=movetopic">Moving Topics</A></TD></TR>
+</TABLE>
+
+<BR></TD><TD>
+
+&nbsp;
+
+<BR></TD></TR></TABLE>

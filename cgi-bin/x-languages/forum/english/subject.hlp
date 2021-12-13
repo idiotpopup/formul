@@ -1,0 +1,41 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+
+<B> Topics </B> <BR>
+Each category can hold a lot of topics that have been placed by other members of the forum.
+In those topics, the actual messages are viewable.
+Om zelf ook antwoorden te geven op berichten, of zelf een nieuwe conversatie te
+beginnen, zul je eerst lid moeten worden.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Home', located in the upper toolbar</LI>
+  <LI> Press at a Subject/Category you're interested in, or choose the general subject</LI>
+</UL>
+<P>
+<B> Topic Creation </B> <BR>
+Topics can be added by pressing the 'New Topic' button in the extra toolbar. <BR>
+<EM>Note that before you can do this, you need to create a member account first.</EM>
+<P>
+<B> Hot Topic Icons </B> <BR>
+Topics can have different icons, what helps you finding a interesting topic.
+Topics wherein users have posted quite an amount of posts, will be marked
+as 'hot-topics' or 'very-hot-topics' and flames will appear on the thead's icon.<BR>
+<P>
+<B> New Topic Icons </B> <BR>
+When you're logged in, all your topic views will be monitored.
+If a topic has been modified after your last visit, a new icon will
+appear at the end of the  topic's name. This helps you detecting changes very fast.
+After you've registered your member account, all topics will be marked as read,
+so again you'll find changes after your registration fast.
+<P>
+<B> Locked Topics </B> <BR>
+When users are polluting the forum, by creating topics containing nonsence,
+those topics can be locked by moderators of the forum. Locked topics can still be
+accessed, but no one can post new messages on it. A lock icon will appear on the topic's icon.
+<P>
+<B> See Also </B> <BR>
+<UL>
+  <LI> <A href="x-forum.cgi?show=help&help=addpost">Posting Messages</A></LI>
+  <LI> <A href="x-forum.cgi?show=help&help=addtopic">Starting Topics Yourself</A></LI>
+</UL>

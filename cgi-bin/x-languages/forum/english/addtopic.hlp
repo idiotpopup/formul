@@ -1,0 +1,37 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+
+<B> Making Topics </B> <BR>
+As a member of the forum you can also make new topics.
+The topic you're making could contain a question, statement or comment where
+you could't get the answer of. Then this forum and it's members can be a great help finding
+the answer to your question.
+<P>
+<B> How Do I Display This Window? </B><BR>
+<UL>
+  <LI> Press at 'Home', located in the upper toolbar</LI>
+  <LI> Press at a subject/category you're inteserted in, or choose the general subject</LI>
+  <LI> Press at 'New Topic', located in the extra toolbar</LI>
+</UL>
+<P>
+<EM>Before you can make a new topic, you'll have to login or signup first.</EM>
+<P>
+<B> Message </B> <BR>
+Type a clear description as title of the message.
+As default, the notation Re &lt;Old Title&gt; is used, which stands for 'reply of &lt;message&gt;'.
+Next, you can enter your message.
+Becore you post the message, it might be useful to look at the result,
+by pressing the 'Preview' button. This is quite useful when you're quoting people,
+use markup or smileys.
+<P>
+<B> Smileys </B> <BR>
+Smileys (or emoticons) are used by many people at the internet to express a fealing or emotion in a part of text.
+Mostly the characters <KBD>;)</KBD> and <KBD>:(</KBD> are used (rotate your head to the left).
+This forum replaced common used smileys by real images, which is much cooler and less difficult to understand.
+Those special expressions can be added aswell by pressing the smiley at the special markup toolbar.
+<P>
+<B> Markup </B> <BR>
+Experienced users might like it to add markup to their posts.
+This markup won't be added right away, but codes are being inserted.
+These codes will later be replaced by the real markup. <BR>
+More Info: <A href="x-forum.cgi?show=help&help=markup">Markup Samples</A>.

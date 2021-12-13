@@ -1,0 +1,67 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.6 at 2 April 2002 ---->
+
+<B> Markup </B> <BR>
+Experianced users might like to add markup to their messages. This markup however,
+will not be appied directly, but special codes will be inserted in the message.
+These codes will later be used to display the real markup. Afterall, that makes your messages
+a lot more personalized. Note that the administrator of this forum can disable the use of markup!
+<P>
+<B> Simple Markup Codes </B> <BR>
+The most simple markup codes can just be placed around the text. The text would become bold or italic, for example.
+<TABLE width="100%" border="2" cellspacing="0">
+  <TR><TH bgcolor="#CCCCCC">Markup codes</TH><TH bgcolor="#CCCCCC">Result</TH></TR>
+  <TR><TD>
+    <PRE><FONT size="+1" color="#666666">This is <FONT color="#333333">[B]</FONT>bold<FONT color="#333333">[/]</FONT>,<BR><FONT color="#333333">[U]</FONT>underlined<FONT color="#333333">[/]</FONT>,<BR>and <FONT color="#333333">[B][U]</FONT>both<FONT color="#333333">[/][/]</FONT>!</FONT></PRE>
+  </TD><TD>
+    This is <B>bold</B>,<BR><U>underlined</U>,<BR>and <B><U>both</U></B>!
+  </TD></TR><TR><TD>
+    <PRE><FONT size="+1" color="#666666"><FONT color="#333333">[FONT=Arial,green,+2]</FONT>Bigger green<BR>(using English name!) in Arial<FONT color="#333333">[/]</FONT>,<BR><FONT color="#333333">[COLOR=#0000FF]</FONT>Blue text using hexcodes<FONT color="#333333">[/]</FONT>,<BR><FONT color="#333333">[SIZE=1]</FONT>Small text size 1<FONT color="#333333">[/]</FONT></FONT></PRE>
+  </TD><TD>
+    <FONT face="Arial" color="green" size="+2">Bigger Green<BR>(using English name!) in Arial</FONT>,<BR><FONT color="#0000FF">Blue text using hexcodes</FONT>,<BR><FONT size="1">Small text size 1</FONT>
+  </TD></TR>
+</TABLE>
+<P>
+<B> Making Lists </B> <BR>
+Here are more complicated examples. They require more markup codes and modifications.
+You can remove the spaces and returns to make things more compact. The forum itself tries to do the same aswell, by removing end-of-line markings after some XBBC codes.
+Finally, you're allowed to add some extra text in the closing tag; <CODE><FONT color="#333333">[/]</FONT></CODE>, for readability.
+<TABLE width="100%" border="2" cellspacing="0">
+  <TR><TH bgcolor="#CCCCCC">Markup codes</TH><TH bgcolor="#CCCCCC">Result</TH></TR>
+  <TR><TD>
+    <PRE><FONT size="+1" color="#666666"><FONT color="#333333">[LIST]</FONT><BR>  <FONT color="#333333">[-]</FONT> Normal<BR>  <FONT color="#333333">[-]</FONT> Normal<BR>  <FONT color="#333333">[-o]</FONT> Circles<BR>  <FONT color="#333333">[-#]</FONT> Squares<BR>  <FONT color="#333333">[-@]</FONT> Discs<BR><FONT color="#333333">[/ End Of List]</FONT></FONT></PRE>
+  </TD><TD>
+    <UL><LI> Normal <LI> Normal <LI type="circle"> Circels <LI type="square"> Squares <LI type="disc"> Discs </UL>
+  </TD></TR><TR><TD>
+    <PRE><FONT size="+1" color="#666666"><FONT color="#333333">[ENUM]</FONT><BR>  <FONT color="#333333">[-]</FONT> Normal<BR>  <FONT color="#333333">[-]</FONT> Normal<BR>  <FONT color="#333333">[-I]</FONT> Roman<BR>  <FONT color="#333333">[-L]</FONT> Lowercase<BR>  <FONT color="#333333">[-U]</FONT> Uppercase<BR>  <FONT color="#333333">[-N]</FONT> Numbers<BR><FONT color="#333333">[/]</FONT></FONT></PRE>
+  </TD><TD>
+    <OL><LI> Normal <LI> Normal <LI type="I"> Roman <LI type="a"> Lowercase <LI type="A"> Uppercase <LI type="1"> Numbers </OL>
+  </TD></TR>
+</TABLE>
+<P>
+<B> Tables and pictures </B> <BR>
+Tables are a bit difficult to make, but they can be very handly
+when aligning images next to the text. You can even make your post loog like a news paper.
+The <CODE><FONT color="#333333">[|]</FONT></CODE> code is used to split cells in a row.
+Each row must consist of as many cells as the other rows!
+<TABLE width="100%" border="2" cellspacing="0">
+  <TR><TH bgcolor="#CCCCCC">Markup codes</TH><TH bgcolor="#CCCCCC">Result</TH></TR>
+  <TR><TD>
+    <PRE><FONT size="+1" color="#666666"><FONT color="#333333">[TABLE]</FONT><BR>  <FONT color="#333333">[ROW]</FONT>Cell1 Row1<BR>    New Line!<BR>    An image is aligned next to this text!<BR>    Tables make this happen <FONT color="#333333">[|]</FONT><BR><FONT color="#333333">[IMAGE=http://www.mywebsite.com/plaatje.gif,<BR>100,40,Image!]</FONT><BR>     <FONT color="#333333">[FONT=Arial,red,1]</FONT>My Picture<FONT color="#333333">[/]</FONT><BR>  <FONT color="#333333">[/ End of row 1]</FONT><BR><FONT color="#333333">[/ End of table!]</FONT></FONT></PRE>
+  </TD><TD>
+    <TABLE cellspacing="15"><TR><TD>Cell1 Row1<BR>New Line!<BR>An image is aligned next to this text!<BR>Tables make this happen</TD><TD><IMG width="100" height="40" alt="Image!"><BR><FONT face="Arial" color="red" size="1">My Picture</FONT></TD></TR></TABLE>
+  </TD></TR>
+</TABLE>
+<P>
+<B> Multiple Comma Separated Arguments </B><BR>
+Defaultly, a comma is used to separate the parameters of the XBBC code. What if you
+want to use the comma inside message parameter? You can put quotes arround it!
+Example: <CODE><FONT color="#333333">[quote="Hello,World!"]</FONT></CODE>
+or <CODE><FONT color="#333333">[image=url,16,16,"Hello,World!"]</FONT></CODE>.
+To display literal quotes arround the arguments, use the quotes twice,
+like this: <CODE><FONT color="#333333">[quote=""Hello,World!""]</FONT></CODE>
+<P>
+<B> Now Let's Start... </B> <BR>
+Most likely, you'll be able to find out how other markup codes work.
+Most of the markup-buttons in the post message window will place sample code,
+and with some minor adjustments, you'll get the preferred result.

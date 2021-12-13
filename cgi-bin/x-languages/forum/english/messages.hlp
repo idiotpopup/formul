@@ -1,0 +1,31 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.4 Release --->
+
+<B> Private Messages </B> <BR>
+In the folder "Messages", you'll find all messages that have been sent
+to you by other members. Except for that, there is also a second folder
+available, named "Sent Messages". In that folder are all messages located
+you've sent, while putting on the "Save Copy" option.
+<P>
+In both folders, you'll see an overview of the messages first.
+After that, all messages are displayed.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Messages', located in the upper toolbar</LI>
+</UL>
+<EM>Before you can all this, you need to login or signup first.</EM>
+<P>
+<B> Sending a new message </B> <BR>
+Press at 'Compose', located in the extra toolbar.
+From there, can read further instructions.
+<P>
+<EM>Before you can send a message, you need to login or signup first.</EM>
+<P>
+<B> New Messages </B> <BR>
+A 'new' icon will appear when you have received a new message.
+This icon will be visible in the upper toolbar, and in the "Messages" folder itself.
+<P>
+<B> See also </B> <BR>
+<UL>
+  <LI> <A href="x-forum.cgi?show=help&help=compose">Composing messages</A></LI>
+</UL>

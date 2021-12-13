@@ -1,0 +1,48 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+<!---- Modified for X-Forum 1.6 at 2 April 2002 ---->
+
+<B> Modify your Profile </B> <BR>
+Your virtual-profile will be used by other forum members to reconize you.
+You can specify your own image, name and text.
+Your profile can be modified at any time, and all posted messages
+will be modified automatically aswell.
+You'll have to be logged in to change this information.
+The adminstrator can change this information aswell, if it contains
+unsuitable information.
+<P>
+<B> How Do I Display This Window? </B><BR>
+<UL>
+  <LI> Make you you're logged in. Press at 'Log in', located at the upper toolbar</LI>
+  <LI> Press at 'Profile', located in the upper toolbar</LI>
+  <LI> Press at 'Modify', located in the extra toolbar</LI>
+</UL>
+<P>
+<EM>You can only do this when you're a member and also logged in</EM>
+<P>
+<B> Forum Appearance </B> <BR>
+This information is very important. It contains your identity at the forum.
+Your name, personal image and text will be displayed at very post you make.
+You can either choose a image from our database, or enter a valid URL yourself.
+<EM>Notice that most of the path- and file- names are case-sensetive at the internet!</EM>
+If you don't spell the name of the image incorrecty, it will properly not be found.<BR>
+Finally, you can enter a personal text that will be displayed below every post.
+In this signature, you're allowed to use the <A href="x-forum.cgi?show=help&help=markup">XBBC markup codes</A> of this forum!
+Please note that the administrator can disable the use of XBBC markup codes.
+Signatures are mostly filled with jokes, quotes or just funny things.
+<P>
+<B> General Information </B> <BR>
+The general information will be useful to other members of the forum.
+People can see in what country you live, how old you are,
+wheter you're male or female and so on.
+This information can solve some communicational problems,
+and might only be entirely displayed when you're logged in.
+<P>
+<B> Messenging </B> <BR>
+By entering the names of your e-mail (Electronic Mail), ICQ (I-seek-you), AIM (AOL Instant Messenger), YIM (Yahoo Instant Messenger), and MSN (Microsoft Network)
+users can contact you in other ways aswell. Your e-mail address can be hidden to other users (to prevent spamming),
+but you'll have to fill it in anyway. That's because we want to be able to contact you when problems occur.
+<P>
+<B> Website </B> <BR>
+Oh yes, you can promote your own website. Fill in the URL and specify a title aswell that could be displayed
+in stead of the URL.

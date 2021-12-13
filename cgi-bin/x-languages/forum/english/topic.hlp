@@ -1,0 +1,25 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+<!---- Modified for X-Forum 1.4 at 5 Junuary 2002 ---->
+
+<B> Posted Messages </B> <BR>
+Inside a topic, you'll find all the messages that have been posted by other members.
+Je can reply to these messages.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Home', located in the upper toolbar</LI>
+  <LI> Press at a Subject/Category you're interested in, or choose the general subject</LI>
+  <LI> Press at a topic, and read through it.</LI>
+</UL>
+<P>
+<B> Posting Replies </B> <BR>
+Press at 'Reply', located in the extra toolbar.
+To reply directly to a previous message, you'll have to find that message, and press 'Quote'.
+<P>
+<EM>Before you can do this, you'll have to be a member and logged in.</EM>
+<P>
+<B> See Also </B> <BR>
+<UL>
+  <LI> <A href="x-forum.cgi?show=help&help=addpost">Posting Messages</A></LI>
+  <LI> <A href="x-forum.cgi?show=help&help=addtopic">Starting Topics Yourself</A></LI>
+</UL>

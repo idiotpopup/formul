@@ -1,0 +1,29 @@
+<!---- Help Topic Written by Diederik van der Boor for X-Forum 1.0 Release --->
+
+<B> Modifying Messages </B> <BR>
+Sometimes you might not like the contents of your message anymore.
+In that case, it might be useful to know you can change it if you have to.
+<P>
+<B> How do I display this window? </B><BR>
+<UL>
+  <LI> Press at 'Home', located in the upper toolbar</LI>
+  <LI> Press at a Subject/Category you've posted your message in</LI>
+  <LI> Press at a topic, and read through it.</LI>
+  <LI> Find your message and press 'Modify', located in the extra toolbar</LI>
+</UL>
+<P>
+<EM>Before you can do this, you'll have to login, or signup first.</EM>
+<P>
+The message that you're about the change has already been filled in.
+You can correct the message, refrase something, or change it a bit.
+It is important you don't erase every strange comment in your message,
+because other users won't understand what other replies in this topic are about then.
+Most likely you're already familliar with the markup codes and toolbar buttons.<BR>
+More Info: <A href="x-forum.cgi?show=help&help=markup">Markup Samles</A> and <A href="x-forum.cgi?show=help&help=addpost">Posting Messages</A>.
+<P>
+<B> Who can modify a message? </B> <BR>
+<UL>
+  <LI> The poster of the message itself</LI>
+  <LI> The Administrator</LI>
+  <LI> All the moderators of the current subject</LI>
+</UL>
