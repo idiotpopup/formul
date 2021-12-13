@@ -1,0 +1,35 @@
+/*
+ *  X-Forum Style Sheet.
+ *  This file ADDS advanced markup codes to
+ *  the X-Forum pages.
+ *
+ *  Note that settings are also defined elsewhere
+ *  in normal HTML code attributes.
+ *  Default markup for your website should be
+ *  put in a general style sheet, and be
+ *  imported by every page in your website.
+ *  Modify the template file to use that file
+ *  in the X-Forum pages aswell.
+ */
+
+
+/********************************************
+   Table Title Text
+ ********************************************/
+
+SPAN.Title { background-color: #696969; }
+
+
+
+/********************************************
+   Link Colors
+ ********************************************/
+
+A.CommandButton       { height:           18px;        }
+A:hover.CommandButton { background-color: #848484;     }
+A:hover.icon          { background-color: transparent; }
+
+/* A:hover.XBBCButton { }   */
+
+A.SmileyButton       { position:relative; left:0;top:0; }
+A:hover.SmileyButton { left:1; top:1; }

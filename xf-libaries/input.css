@@ -1,0 +1,87 @@
+/*
+ *  X-Forum Style Sheet.
+ *  This file ADDS advanced markup codes to
+ *  the X-Forum pages.
+ */
+
+
+/********************************************
+   Input Fields
+ ********************************************/
+
+TD.InputLabel
+{
+  padding-top:         4px;
+  text-align:          right;
+  vertical-align:      top;
+}
+
+INPUT, TEXTAREA, SELECT
+{
+  height:              22px;
+  font-size:           10pt;
+  font-family:         Verdana, Arial, Times new Roman, Times, sans-serif;
+  background-color:    #FFFFFF;
+}
+
+
+SELECT.multiple   { height:  auto; }
+SELECT.autosize   { width:   auto; }
+
+TEXTAREA.smallest { height:  44px; } /*** 2 * INPUT.height ***/
+TEXTAREA.small    { height:  88px; } /*** 4 * INPUT.height ***/
+TEXTAREA.large    { height: 220px; } /*** 12 * INPUT.height ***/
+
+
+INPUT.CoolText    { width:  400px; }
+INPUT.CoolTextIn  { width:  300px; } /*** INPUT.CoolText.width - INPUT.CoolButtonIn.width ***/
+INPUT.CoolTextClr { width:  100px; }
+INPUT.CoolTextDlg { width:  300px; }
+TEXTAREA          { width:  400px; scrollbar-track-color: #FFFFFF; }
+SELECT            { width:  400px; }
+
+
+
+
+TEXTAREA.editbox
+{
+  font-size:             8pt;
+  font-family:           Lucida Console, Courier New, Courier, monospace;
+  width:                 100%;
+  height:                440px;	   /*** 24 * INPUT.height ***/
+  color:                 #000000;
+  background-color:      #FFFFFF;
+  scrollbar-track-color: #FFFFFF; 
+}
+
+
+INPUT.CoolBox
+{
+  cursor:              hand;
+  background-color:    transparent;
+  border-width:        0px;
+}
+
+
+INPUT.CoolButton
+{
+  font-size:           12px;
+  font-style:          normal;
+  font-weight:         bold;
+
+  cursor:              hand;
+  width:               120px;
+  background-color:    #CCCCCC;
+}
+
+
+INPUT.CoolButtonIn
+{
+  font-size:           12px;
+  font-style:          normal;
+  font-weight:         bold;
+
+  cursor:              hand;
+  width:               100px;
+  background-color:    #CCCCCC;
+}
